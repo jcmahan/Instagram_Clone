@@ -3,18 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header'
 import Post from './Components/Post'
+import ApolloClient from 'apollo-boost';
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000'
+})
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <section className='App-main'>
-        <Post nickname='Chris' avatar="https://www.laravelnigeria.com/img/chris.jpg" caption="Moving the community!" image="https://i.imgur.com/K82y6PV.png" />
-        <Post nickname="OG" avatar="https://www.laravelnigeria.com/img/chris.jpg" caption="Holding a mic" image="https://i.imgur.com/rNy0j9g.png" />
-        </section>
-      </div>
+      <ApolloClient client={client}>
+        <div className="App">
+          <Header />
+          <section className='App-main'>
+            <Post />
+          </section>
+        </div>
+      </ApolloClient>
     );
   }
 }
