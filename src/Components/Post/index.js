@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Query} from 'react-apollo';
-// import gql from 'graphql-tag';
+  // import gql from 'graphql-tag';
 import { gql } from 'apollo-boost';
 import './post.css';
 
@@ -32,7 +32,7 @@ const Post = () => {
         >
         {({ loading, error, data }) => {
           if (loading) return <p>Loading Post... </p>;
-          if (error) return <p>Error loading post...</p>;
+          if (error) return <p>Error loading post </p>;
           let image = data.post.image; 
           let caption = data.post.caption; 
           let user = data.post.user;
