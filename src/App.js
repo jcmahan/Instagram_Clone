@@ -10,9 +10,9 @@ const client = new ApolloClient({
 
 
 class App extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   render() {
     return (
