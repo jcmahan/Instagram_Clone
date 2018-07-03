@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import './post.css';
 
-
   class Post extends Component {
+    
   render() {
       const nickname = this.props.nickname; 
       const avatar = this.props.avatar;
@@ -26,7 +26,7 @@ import './post.css';
           </div>
         </div>
         <div className="Post-caption">
-          <strong>{nickname} </strong> {caption}
+          <strong>{nickname}</strong> {caption}
         </div>
       </article>
     );
