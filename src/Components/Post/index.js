@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import {Query} from 'react-apollo';
+import gql from 'graphql-tag';
 import './post.css';
 
   class Post extends Component {
-    
+
   render() {
-      const nickname = this.props.nickname; 
-      const avatar = this.props.avatar;
-      const image = this.props.image; 
-      const caption = this.props.caption; 
+      let nickname = this.props.nickname; 
+      let avatar = this.props.avatar;
+      let image = this.props.image; 
+      let caption = this.props.caption; 
     return (
       <article className="Post" ref="Post">
         <header>
