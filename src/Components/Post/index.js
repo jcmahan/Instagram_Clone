@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import {Query} from 'react-apollo';
-import gql from 'graphql-tag';
 import './post.css';
 
   class Post extends Component {
@@ -28,7 +26,7 @@ import './post.css';
           </div>
         </div>
         <div className="Post-caption">
-          <strong>{nickname}</strong> {caption}
+          <strong>{nickname} </strong> &nbsp; {caption}
         </div>
       </article>
     );
